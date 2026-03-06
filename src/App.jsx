@@ -83,7 +83,7 @@ function StartupScreen({ onDone }) {
           <span className="w-2.5 h-2.5 rounded-full bg-green-500 opacity-70" />
           <span className="font-mono text-xs text-green-700 ml-2">bw-system ~ boot</span>
         </div>
-        <div className="bg-black p-6 font-mono text-sm min-h-56" style={{ textShadow: "0 0 7px rgba(34,197,94,0.55)" }}>
+        <div className="bg-black p-6 font-mono text-sm min-h-64" style={{ textShadow: "0 0 7px rgba(34,197,94,0.55)" }}>
           <div className="space-y-1.5 mb-4">
             {visibleLines.map((l, i) => (
               <div key={i} className={l.startsWith("$") ? "text-green-200 mt-3" : l.startsWith("  ") ? "text-green-600" : "text-green-500"}
@@ -279,13 +279,12 @@ export default function App() {
             <div className="space-y-3">
               {[
                 { label: "email", value: "brenny.walker@gmail.com", href: "mailto:brenny.walker@gmail.com" },
-                { label: "phone", value: "(250) 857-2365", href: "tel:2508572365" },
                 { label: "github", value: "github.com/brendonion", href: "https://github.com/brendonion" },
                 { label: "linkedin", value: "linkedin.com/in/brendan-walker", href: "https://linkedin.com/in/brendan-walker-0a728713b" },
               ].map(c => (
                 <a key={c.label} href={c.href} target="_blank" rel="noopener noreferrer"
                   className="flex items-center gap-4 font-mono text-sm text-gray-600 hover:text-green-400 transition-colors group">
-                  <span className="text-green-900 group-hover:text-green-600 shrink-0" style={{ minWidth: "5rem" }}>[{c.label}]</span>
+                  <span className="text-green-900 group-hover:text-green-600 shrink-0" style={{ minWidth: "6rem" }}>[{c.label}]</span>
                   <span>{c.value}</span>
                 </a>
               ))}
